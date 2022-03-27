@@ -1,12 +1,10 @@
-n = int(input())
-sum = 0
-length = 0
-
-while n > 0:
-    n //= 10
-    length += 1
-
-print(sum)
+# loop double_click
+import webbrowser, time
+url = input("Enter url: ")
+duration = input("Enter duration: ")
+for i in range(5):
+    webbrowser.open(url)
+    time.sleep(int(duration))
 
 
 
