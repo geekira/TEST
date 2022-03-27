@@ -42,6 +42,28 @@ for i in range(1, 11):
     x = n * i
     print(x)
 
+# Ecrire un algorithme qui demande un nombre de départ, et qui calcule la somme des entiers
+# jusqu’à ce nombre. Par exemple, si l’on entre 5, le programme doit calculer :
+# 1 + 2 + 3 + 4 + 5 = 15
+# NB : on souhaite afficher uniquement le résultat, pas la décomposition du calcul.
+
+sum = 0
+n = int(input())
+for i in range(1, 6):
+    sum = sum + i
+    print(sum)
+
+# Exercice 5.7
+# Ecrire un algorithme qui demande un nombre de départ, et qui calcule sa factorielle.
+# NB : la factorielle de 8, notée 8 !, vaut
+# 1 x 2 x 3 x 4 x 5 x 6 x 7 x 8
+
+sum = 1
+n = int(input())
+for i in range(2, n + 1):
+    sum = sum * i
+    print(n, "! =", sum)
+
 
 
 
