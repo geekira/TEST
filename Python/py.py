@@ -1,7 +1,8 @@
-n = int(input())
-print((n + 1), "à", (n + 10))
-
-
+n = int(input("Entrez un nombre: "))
+sum = 1
+for i in range(2, n + 1):
+    sum = sum * i
+print(n, "! =", sum)
 
 
 
