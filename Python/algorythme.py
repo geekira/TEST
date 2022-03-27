@@ -58,11 +58,12 @@ for i in range(1, 6):
 # NB : la factorielle de 8, notée 8 !, vaut
 # 1 x 2 x 3 x 4 x 5 x 6 x 7 x 8
 
+
+n = int(input("Entrez un nombre: "))
 sum = 1
-n = int(input())
 for i in range(2, n + 1):
     sum = sum * i
-    print(n, "! =", sum)
+print(n, "! =", sum)
 
 
 
