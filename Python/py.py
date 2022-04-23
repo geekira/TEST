@@ -1,10 +1,10 @@
-n = int(input("Entrez un nombre: "))
-sum = 1
-for i in range(2, n + 1):
-    sum = sum * i
-print(n, "! =", sum)
+def delete_starting_evens(lst):
+  while (len(lst) > 0 and lst[0] % 2 == 0):
+   lst = lst[1:]
+  return lst
 
-
+print(delete_starting_evens([4, 8, 10, 11, 12, 15]))
+print(delete_starting_evens([4, 8, 10]))
 
 
 
