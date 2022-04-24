@@ -118,6 +118,20 @@ print(reversed_list([1, 2, 3], [3, 2, 1]))
 print(reversed_list([1, 5, 3], [3, 2, 1]))
 
 
+"""Dans ce code, nous itérons à travers chacun des indices pour la longueur totale de l'une ou l'autre des listes (puisque nous supposons que les longueurs sont égales) et 
+nous effectuons une comparaison sur chacun des éléments. Nous récupérons l'élément à l'index courant de notre première liste avec lst1[index] et nous le testons par rapport 
+au dernier index de la seconde liste moins l'index courant len(lst2) - 1 - index.
+
+Ces calculs sont un peu compliqués - il est utile de prendre un exemple concret. Si l'on nous donne une liste de 5 éléments, les indices valides sont de 0 à 4, 
+ce qui signifie que le dernier indice de la deuxième liste est len(lst2) - 1, soit 5 - 1 = 4. Maintenant, pour obtenir l'inverse de la position à laquelle 
+nous sommes dans la première liste, nous soustrayons l'indice auquel nous sommes à la fin de la deuxième liste. Donc, au premier passage, nous allons comparer 
+l'élément à la position 0 à l'élément à la position 5 - 1 - 0 = 4. Au passage suivant, nous comparerons l'élément en position 1 à l'élément en position 5 - 1 - 1 = 3, et ainsi de suite.
+
+Si l'un des deux éléments n'est pas égal, nous savons que la deuxième liste n'est pas l'inverse de la première et nous retournons False. 
+Si nous sommes arrivés à la fin sans erreur, nous pouvons renvoyer True puisque la deuxième liste est l'inverse de la première. 
+Vous pouvez également essayer de simplifier ce code en utilisant la fonction python reversed() ou d'autres méthodes que 
+vous apprendrez plus tard, comme le "slicing"."""
+
 
 
 
