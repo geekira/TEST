@@ -60,6 +60,44 @@ def max_num(nums):
 
 print(max_num([50, -10, 0, 75, 20]))
 
+#Dans ce défi, nous devons trouver les indices dans deux listes de taille égale où les chiffres correspondent. Nous allons itérer à travers les deux listes en même temps et comparer les valeurs, si les nombres sont égaux, alors nous enregistrons l'indice. Voici les étapes dont nous avons besoin pour accomplir cette tâche :
+
+ """Définir notre fonction pour accepter deux listes de nombres.
+    Créer une nouvelle liste pour stocker les indices correspondants
+    Bouclez sur chaque indice jusqu'à la fin de l'une ou l'autre de nos listes.
+    Dans la boucle, vérifiez si notre première liste à l'indice actuel est égale à la seconde liste à l'indice actuel. Si c'est le cas, ajoutez l'indice où ils correspondent.
+    Retourner notre liste d'indices"""
+
+def same_values(lst1, lst2):
+ new_list = []
+ for index in range(len(lst1)):
+  if lst1[index] == lst2[index]:
+   new_list.append(index)
+ return new_list
+
+print(same_values([5, 1, -10, 3, 3], [5, 10, -10, 3, 5])
+
+#Dans cette solution, nous avons utilisé une boucle qui itère en utilisant l'intervalle de la longueur de notre liste. Cela génère les indices que nous devons parcourir par itération. Notez que nous supposons que les listes sont de taille égale. Nous accédons ensuite à l'élément à l'index courant de chaque liste en utilisant lst1[index] et lst2[index]. S'ils sont égaux, nous ajoutons l'indice à la nouvelle liste. Enfin, nous retournons les résultats.
+
+#Pour le dernier défi, nous allons tester deux listes pour voir si la deuxième liste est l'inverse de la première. Il y a plusieurs façons d'aborder cette question, mais nous allons essayer une méthode qui itère à travers chacune des valeurs dans une direction pour la première liste et les compare aux valeurs partant de l'autre direction dans la deuxième liste. Voici ce que vous devez faire :
+
+ """Définir une fonction qui a deux paramètres d'entrée pour nos listes.
+    Effectuez une boucle sur chaque indice de l'une des listes, du début à la fin.
+    Dans la boucle, comparez l'élément de la première liste à l'indice actuel avec l'élément du dernier indice de la deuxième liste moins l'indice actuel. S'il y a un désaccord, alors les listes ne sont pas inversées et nous pouvons retourner False.
+    Si la boucle se termine avec succès, alors nous savons que les listes sont inversées et nous pouvons retourner True."""
+
+def reversed_list(lst1, lst2):
+ for index in range(len(lst1)):
+  if lst1[index] != lst2[len(lst2) - 1 - index]:
+   return False
+ return True
+
+print(reversed_list([1, 2, 3], [3, 2, 1]))
+print(reversed_list([1, 5, 3], [3, 2, 1]))
+
+
+
+
 
 
 
